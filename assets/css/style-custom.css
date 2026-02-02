@@ -849,3 +849,17 @@ canvas.pdf {
   border-radius: 4px;
   text-transform: uppercase;
 }
+
+/* #first_documents_accordion:has([aria-expanded="true"]),
+#second_documents_accordion:has([aria-expanded="true"]) {
+  flex: 1;
+} */
+
+/* .first-toggle_accordion {
+  height: auto;
+  flex: unset;
+}
+
+.second-toggle_accordion {
+  flex: 1;
+} */

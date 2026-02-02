@@ -146,7 +146,7 @@
           </div>
         </aside>
         <div id="kt_splitter_middle_left_bar"
-          class="splitter-bar w-1.5 h-full lg:inline hidden relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group"
+          class="splitter-bar w-1.5 h-full lg:flex hidden relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group z-20 shrink-0"
           data-splitter-bar>
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -440,7 +440,7 @@
           </div>
         </div>
         <div id="kt_splitter_middle_right_bar"
-          class="splitter-bar w-1.5 h-full hidden lg:inline relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group"
+          class="splitter-bar w-1.5 h-full hidden lg:flex relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group z-20 shrink-0"
           data-splitter-bar="true">
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -451,7 +451,7 @@
           data-splitter-pane="right">
           <div id="kt_splitter_top_verticle" class="splitter w-full h-full flex flex-col">
             <div id="first_documents_accordion"
-              class="splitter-pane h-half bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="top">
+              class="splitter-pane bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="top" style="height: 50%;">
               <div data-kt-accordion="true" class="kt-accordion w-full relative" data-kt-accordion-initialized="true">
                 <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
                   <button id="accordion_toggle_summary_generator" data-kt-accordion-toggle="true" aria-controls="accordion_design_summary_generator" class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full">
@@ -517,7 +517,7 @@
                 class="w-1 h-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
             </div>
             <div id="second_documents_accordion"
-              class="splitter-pane h-half flex-grow-1 bg-background rounded-lg px-4 py-4 pt-0 kt-scrollable-y-auto min-h-[75px] min-w-[300px]" data-splitter-pane="bottom">
+              class="splitter-pane flex-grow-1 bg-background rounded-lg px-4 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="bottom" style="height: 50%;">
               <div data-kt-accordion="true" class="kt-accordion w-full h-full relative" data-kt-accordion-initialized="true">
                 <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
                   <button id="accordion_toggle_chat_messenger" data-kt-accordion-toggle="true" aria-controls="accordion_design_chat_messenger"  class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full shrink-0">
@@ -1203,6 +1203,7 @@
 
     });
   </script>
+
   <script type="module">
     import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs";
     pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs";
@@ -2979,68 +2980,7 @@
       }, 200);
     }
   </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const firstPane  = document.getElementById('first_documents_accordion');
-      const secondPane = document.getElementById('second_documents_accordion');
-
-      const summaryBtn = document.getElementById('accordion_toggle_summary_generator');
-      const chatBtn    = document.getElementById('accordion_toggle_chat_messenger');
-
-      if (!firstPane || !secondPane || !summaryBtn || !chatBtn) return;
-
-      const HALF_HEIGHT = '50%';
-
-      function isSummaryExpanded() {
-        return firstPane.querySelector('.kt-accordion-item')?.classList.contains('active') ?? false;
-      }
-      function isChatExpanded() {
-        return secondPane.querySelector('.kt-accordion-item')?.classList.contains('active') ?? false;
-      }
-
-      function syncPanes() {
-        const summaryOpen = isSummaryExpanded();
-        const chatOpen = isChatExpanded();
-
-        if (!summaryOpen && !chatOpen) {
-          // both collapsed: both height auto and flex unset
-          firstPane.style.height = 'auto';
-          firstPane.style.flex = 'unset';
-          secondPane.style.height = 'auto';
-          secondPane.style.flex = 'unset';
-        } else if (summaryOpen && !chatOpen) {
-          firstPane.style.height = 'auto';
-          firstPane.style.flex = 'unset';
-          secondPane.style.height = HALF_HEIGHT;
-          secondPane.style.flex = '1';
-        } else if (!summaryOpen && chatOpen) {
-          firstPane.style.height = HALF_HEIGHT;
-          firstPane.style.flex = '1';
-          secondPane.style.height = 'auto';
-          secondPane.style.flex = 'unset';
-        } else {
-          // both expanded: 50/50
-          firstPane.style.height = HALF_HEIGHT;
-          firstPane.style.flex = '1';
-          secondPane.style.height = HALF_HEIGHT;
-          secondPane.style.flex = '1';
-        }
-      }
-
-      function onAccordionToggle() {
-        // run after accordion has toggled its active class
-        setTimeout(syncPanes, 0);
-      }
-
-      summaryBtn.addEventListener('click', onAccordionToggle);
-      chatBtn.addEventListener('click', onAccordionToggle);
-
-      syncPanes();
-    });
-  </script>
-
-
+  
 </body>
 
 </html>
