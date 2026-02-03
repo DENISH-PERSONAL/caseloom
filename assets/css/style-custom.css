@@ -853,6 +853,47 @@ canvas.pdf {
   text-transform: uppercase;
 }
 
+#askAnswer h1,
+#askAnswer h2,
+#askAnswer h3,
+#askAnswer h4,
+#askAnswer h5,
+#askAnswer h6 {
+  font-weight: 600;
+}
+
+#askAnswer p {
+  font-size: 14px;
+  color: #71717b;
+}
+#askAnswer strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+
+#askAnswer ul {
+  list-style-type: disc !important;
+  margin-bottom: 10px;
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  color: #5b5b5f;
+}
+
+#askAnswer ol li::marker {
+  font-size: 14px !important;
+}
+
+#askAnswer ol {
+  list-style-type: decimal !important;
+  margin-bottom: 10px;
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+}
+
+
 /* #first_documents_accordion:has([aria-expanded="true"]),
 #second_documents_accordion:has([aria-expanded="true"]) {
   flex: 1;
