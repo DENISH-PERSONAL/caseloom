@@ -34,6 +34,10 @@
   width: 340px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-fit {
   width: fit-content;
 }
@@ -61,8 +65,16 @@
   height: 50%;
 }
 
+.min-w-\[280px\] {
+  min-width: 280px;
+}
+
 .min-w-\[340px\] {
   min-width: 340px;
+}
+
+.min-w-\[400\] {
+  min-width: 400px;
 }
 
 .min-w-\[450px\] {
@@ -859,31 +871,36 @@ canvas.pdf {
 #askAnswer h4,
 #askAnswer h5,
 #askAnswer h6 {
-  font-weight: 600;
   font-size: 15px;
-}
-#askAnswer div > h1:first-child,
-#askAnswer div > h2:first-child,
-#askAnswer div > h3:first-child,
-#askAnswer div > h4:first-child,
-#askAnswer div > h5:first-child,
-#askAnswer div > h6:first-child {
   font-weight: 600;
-  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 4px;
 }
 
-#askAnswer p {
-  font-size: 15px;
+#askAnswer h1:first-child,
+#askAnswer h2:first-child,
+#askAnswer h3:first-child,
+#askAnswer h4:first-child,
+#askAnswer h5:first-child,
+#askAnswer h6:first-child {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+#askAnswer p,
+#askAnswer span {
+  font-size: 14px;
   color: #71717b;
 }
 #askAnswer strong {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: black;
 }
 
 #askAnswer ul {
-  font-size: 15px;
+  font-size: 14px;
   list-style-type: disc !important;
   margin-bottom: 10px;
   display: grid;

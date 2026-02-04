@@ -61,10 +61,10 @@
     <main class="grow px-1.5 py-1.5 overflow-hidden bg-muted!" id="content" role="content">
       <div id="kt_splitter_main" class="kt_splitter_main splitter splitter-horizontal flex h-full gap-0">
         <aside id="kt_splitter_main_left"
-          class="kt_aside_left shadow-sm transition-all duration-400 flex w-[300px] min-w-[300px] h-full top-0 left-0 fixed shadow-none"
+          class="kt_aside_left shadow-sm transition-all duration-400 flex w-[280px] min-w-[280px] h-full top-0 left-0 fixed shadow-none"
           data-splitter-pane="left">
           <div class="w-full h-full flex flex-col">
-            <div class="h-full bg-background rounded-lg px-4 py-4 pt-0 kt-scrollable-y-auto min-w-[300px]"
+            <div class="h-full bg-background rounded-lg px-4 py-4 pt-0 kt-scrollable-y-auto min-w-[280px]"
               data-splitter-pane="top" style="flex-shrink: 1">
               <div class="sticky top-0 bg-background pt-4 pb-4 z-4">
                 <div class="flex items-center justify-between gap-2">
@@ -184,7 +184,7 @@
                     class="flex items-center justify-between gap-3 px-2 py-2 border-b border-gray-custom bg-white flex-wrap"
                     id="divToolbar">
                     <div class="flex items-center gap-2 md:w-full sm:justify-center">
-                      <div class="flex items-center border border-gray-custom rounded-md" id="penStack">
+                      <div class="flex items-center border border-gray-custom rounded-md hidden" id="penStack">
                         <div class="kt-menu" data-kt-menu="true">
                           <div class="kt-menu-item kt-menu-item-dropdown flex flex-row" data-kt-menu-item-offset="0, 0"
                             data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown"
@@ -222,7 +222,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="flex items-center border border-gray-custom rounded-md" id="highStack">
+                      <div class="flex items-center border border-gray-custom rounded-md hidden" id="highStack">
                         <div class="kt-menu" data-kt-menu="true">
                           <div class="kt-menu-item kt-menu-item-dropdown flex flex-row" data-kt-menu-item-offset="0, 0"
                             data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown"
@@ -253,7 +253,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="flex items-center border border-gray-custom rounded-md" id="textStack">
+                      <div class="flex items-center border border-gray-custom rounded-md hidden" id="textStack">
                         <div class="kt-menu" data-kt-menu="true">
                           <div class="kt-menu-item kt-menu-item-dropdown flex flex-row" data-kt-menu-item-offset="5, 5"
                             data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown"
@@ -296,7 +296,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="flex items-center gap-2" id="selectImage">
+                      <div class="flex items-center gap-2 hidden" id="selectImage">
                         <button class="kt-btn kt-btn-outline kt-btn-primary kt-btn-sm" id="tool-select" type="button"
                           aria-pressed="true" aria-label="Select tool" title="Select">
                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -447,7 +447,7 @@
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
         </div>
         <aside id="kt_splitter_main_right"
-          class="kt_aside_right shadow-sm transition-all duration-400 flex w-[450px] min-w-[450px] h-full top-0 right-0 fixed shadow-none"
+          class="kt_aside_right shadow-sm transition-all duration-400 flex w-[400px] min-w-[400px] h-full top-0 right-0 fixed shadow-none"
           data-splitter-pane="right">
           <div id="kt_splitter_top_verticle" class="splitter w-full h-full flex flex-col">
             <div id="first_documents_accordion"
@@ -1123,7 +1123,7 @@
         const currentWidth = asideLeft.style.width;
         const computedWidth = window.getComputedStyle(asideLeft).width;
         const isCollapsed = currentWidth === "0px" || currentWidth === "0" || (currentWidth === "" && computedWidth === "0px");
-        const originalWidth = "300px";
+        const originalWidth = "280px";
 
         asideLeft.style.transition = "width 400ms ease-in-out, min-width 400ms ease-in-out";
 
@@ -1133,7 +1133,7 @@
 
           requestAnimationFrame(() => {
             asideLeft.style.width = originalWidth;
-            asideLeft.style.minWidth = "300px";
+            asideLeft.style.minWidth = "280px";
 
             setTimeout(() => {
               asideLeft.style.overflow = "";
@@ -1180,7 +1180,7 @@
         const currentWidth = asideRight.style.width;
         const computedWidth = window.getComputedStyle(asideRight).width;
         const isCollapsedRight = currentWidth === "0px" || currentWidth === "0" || (currentWidth === "" && computedWidth === "0px");
-        const originalWidthRight = "450px";
+        const originalWidthRight = "400px";
 
         asideRight.style.transition = "width 400ms ease-in-out, min-width 400ms ease-in-out";
 
@@ -1190,7 +1190,7 @@
 
           requestAnimationFrame(() => {
             asideRight.style.width = originalWidthRight;
-            asideRight.style.minWidth = "450px";
+            asideRight.style.minWidth = "400px";
 
             setTimeout(() => {
               asideRight.style.overflow = "";
