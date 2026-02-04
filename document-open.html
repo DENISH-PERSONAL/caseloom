@@ -451,7 +451,7 @@
           data-splitter-pane="right">
           <div id="kt_splitter_top_verticle" class="splitter w-full h-full flex flex-col">
             <div id="first_documents_accordion"
-              class="splitter-pane bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="top">
+              class="splitter-pane bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="top" style="height: 50%;">
               <div data-kt-accordion="true" class="kt-accordion w-full relative" data-kt-accordion-initialized="true">
                 <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
                   <button id="accordion_toggle_summary_generator" data-kt-accordion-toggle="true" aria-controls="accordion_design_summary_generator" class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full">
@@ -476,8 +476,8 @@
                       <form class="kt-form">
                         <div class="kt-form-item">
                           <div class="kt-form-control flex gap-2 items-start">
-                            <textarea id="summary_description" rows="3" 
-                              class="kt-input flex-1 resize-none py-2 min-h-[50px]"
+                            <textarea id="summary_description" rows="4" 
+                              class="kt-input flex-1 resize-none py-2 min-h-[60px]"
                               placeholder="Enter description..."></textarea>
                             <button type="button" class="kt-btn kt-btn-primary">
                               Generate
@@ -486,20 +486,49 @@
                         </div>
                       </form>
                       <div class="kt-form-item mt-4">
-                        <div class="kt-form-control">
-                          <!-- Paragraph -->
-                          <p class="mb-3 text-sm text-gray-700">
-                            This is a dummy paragraph that will display the generated summary text. It will show the main content and description of the summary.
-                          </p>
-                          
-                          <!-- Bullet List -->
-                          <ul class="list-disc list-inside space-y-1 text-sm text-gray-700" style="list-style-type: disc !important; padding-left: 1.5rem;">
-                            <li>Dummy bullet point one - key information</li>
-                            <li>Dummy bullet point two - important details</li>
-                            <li>Dummy bullet point three - additional notes</li>
-                            <li>Dummy bullet point four - summary items</li>
-                          </ul>
-                        </div>
+                        <div id="askAnswer" c="" class="kt-form-control">
+                                    <h3>Summary of Memorandum of Understanding (MOU)</h3>
+                                    <ol>
+                                        <li>
+                                            <p><strong>Parties Involved</strong>: The MOU is between the Villages of
+                                                Bloomingdale Community Development District (CDD) and the Villages of
+                                                Bloomingdale I Homeowners Association, Inc. (Association), both located
+                                                in Hillsborough County, Florida. [document 2_v1 (exhibit 28).pdf p.1]
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Purpose</strong>: The MOU outlines responsibilities for the
+                                                maintenance, repair, and replacement of the stormwater management system
+                                                within the District, including funding arrangements. [document 2_v1
+                                                (exhibit 28).pdf p.1]</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Responsibilities</strong>: The District and Association have
+                                                distinct roles in maintaining components of the stormwater system. The
+                                                District may intervene if the Association fails to maintain its
+                                                components, and both parties must coordinate enforcement actions to
+                                                avoid duplication of efforts. [document 2_v1 (exhibit 28).pdf p.3]</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Termination and Notice</strong>: Either party may terminate the
+                                                MOU with at least 12 months' written notice. Notices must be sent via
+                                                certified mail or equivalent methods providing delivery confirmation.
+                                                [document 2_v1 (exhibit 28).pdf p.3]</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Public Records Compliance</strong>: Documents related to the MOU
+                                                are subject to public records laws under Chapter 119 and Chapter 720 of
+                                                the Florida Statutes. [document 2_v1 (exhibit 28).pdf p.3]</p>
+                                        </li>
+                                    </ol>
+                                    <h3>Citations</h3>
+                                    <p>[document 2_v1 (exhibit 28).pdf p.1], [document 2_v1 (exhibit 28).pdf p.3]</p>
+                                    <h3>Disclaimer</h3>
+                                    <p>I’m not a lawyer and this isn’t legal advice. For specific guidance, consult
+                                        counsel.</p>
+                                    <p>Sources: document 2_v1 (exhibit 28).pdf p.1, document 2_v1 (exhibit 28).pdf p.3
+                                    </p>
+                                </div>
                       </div>
                     </div>
                   </div>
@@ -517,7 +546,7 @@
                 class="w-1 h-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
             </div>
             <div id="second_documents_accordion"
-              class="splitter-pane flex-grow-1 bg-background rounded-lg px-4 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="bottom">
+              class="splitter-pane flex-grow-1 bg-background rounded-lg px-4 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="bottom" style="height: 50%;">
               <div data-kt-accordion="true" class="kt-accordion w-full h-full relative" data-kt-accordion-initialized="true">
                 <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
                   <button id="accordion_toggle_chat_messenger" data-kt-accordion-toggle="true" aria-controls="accordion_design_chat_messenger"  class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full shrink-0">
@@ -2981,7 +3010,51 @@
     }
   </script>
 
-  
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function handleAccordionHeight(accordionId, toggleBtnId, contentId) {
+    const container = document.getElementById(accordionId);
+    const toggleBtn = document.getElementById(toggleBtnId);
+    const content = document.getElementById(contentId);
+
+    if (!container || !toggleBtn || !content) return;
+
+    // initial state (open by default in your markup)
+    container.style.height = "50%";
+
+    toggleBtn.addEventListener("click", function () {
+      // KT accordion hides content via inline style or class
+      const isClosed =
+        content.style.display === "none" ||
+        content.classList.contains("hidden");
+
+      if (isClosed) {
+        // opening
+        container.style.height = "calc(100% - 60px)";
+      } else {
+        // closing
+        container.style.height = "60px";
+      }
+    });
+  }
+
+  // First accordion
+  handleAccordionHeight(
+    "first_documents_accordion",
+    "accordion_toggle_summary_generator",
+    "accordion_design_summary_generator"
+  );
+
+  // Second accordion
+  handleAccordionHeight(
+    "second_documents_accordion",
+    "accordion_toggle_chat_messenger",
+    "accordion_design_chat_messenger"
+  );
+});
+</script>
+
   
 </body>
 
