@@ -860,19 +860,30 @@ canvas.pdf {
 #askAnswer h5,
 #askAnswer h6 {
   font-weight: 600;
+  font-size: 15px;
+}
+#askAnswer div > h1:first-child,
+#askAnswer div > h2:first-child,
+#askAnswer div > h3:first-child,
+#askAnswer div > h4:first-child,
+#askAnswer div > h5:first-child,
+#askAnswer div > h6:first-child {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 #askAnswer p {
-  font-size: 14px;
+  font-size: 15px;
   color: #71717b;
 }
 #askAnswer strong {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: black;
 }
 
 #askAnswer ul {
+  font-size: 15px;
   list-style-type: disc !important;
   margin-bottom: 10px;
   display: grid;
@@ -882,7 +893,7 @@ canvas.pdf {
 }
 
 #askAnswer ol li::marker {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 #askAnswer ol {
