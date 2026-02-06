@@ -979,3 +979,15 @@ canvas.pdf {
   flex: 0 0 auto;
   flex-shrink: 0;
 }
+
+#first_documents_accordion,
+#second_documents_accordion {
+  min-height: 60px;
+}
+
+#first_documents_accordion:has(.kt-accordion-item.active),
+#second_documents_accordion:has(.kt-accordion-item.active) {
+  height: 50%;
+}
+
+

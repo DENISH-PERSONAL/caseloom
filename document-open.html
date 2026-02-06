@@ -42,7 +42,8 @@
     <header
       class="kt-header fixed top-0 left-0 right-0 z-4 bg-gray-800 px-3.5 h-[60px] flex items-center bg-background">
       <div class="h-full w-full rounded-lg grid items-center justify-center shadow-sm relative gap-1">
-        <div class="flex border border-primary w-fit px-2 py-1 bg-primary/10 rounded-md items-center gap-2 lg-absulate lef-1/2 translate-1/2">
+        <div
+          class="flex border border-primary w-fit px-2 py-1 bg-primary/10 rounded-md items-center gap-2 lg-absulate lef-1/2 translate-1/2">
           <svg stroke="currentColor" fill="currentColor" class="text-primary" stroke-width="0" viewBox="0 0 512 512"
             height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -68,7 +69,8 @@
               data-splitter-pane="top" style="flex-shrink: 1">
               <div class="sticky top-0 bg-background pt-4 pb-4 z-4">
                 <div class="flex items-center justify-between gap-2">
-                  <div class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Lead Counsel Documents</div>
+                  <div class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Lead Counsel Documents
+                  </div>
                   <button id="kt_aside_toggle_left_mobile"
                     class="kt-btn kt-btn-outline kt-btn-icon size-[30px] h-[36px] xl:hidden" data-kt-toggle="true"
                     data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize"
@@ -92,8 +94,12 @@
                         <div class="flex items-start justify-between gap-3">
                           <div class="flex flex-col flex-1 min-w-0">
                             <a href="" class="flex flex-col">
-                              <span class="text-primary text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document 1</span>
-                              <span class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
+                              <span
+                                class="text-primary text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document
+                                1</span>
+                              <span
+                                class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample
+                                PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
                             </a>
                           </div>
                         </div>
@@ -112,8 +118,12 @@
                         <div class="flex items-start justify-between gap-3">
                           <div class="flex flex-col flex-1 min-w-0">
                             <a href="" class="flex flex-col">
-                              <span class="text-mono text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document 1</span>
-                              <span class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
+                              <span
+                                class="text-mono text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document
+                                1</span>
+                              <span
+                                class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample
+                                PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
                             </a>
                           </div>
                         </div>
@@ -132,8 +142,12 @@
                         <div class="flex items-start justify-between gap-3">
                           <div class="flex flex-col flex-1 min-w-0">
                             <a href="" class="flex flex-col">
-                              <span class="text-mono text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document 1</span>
-                              <span class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
+                              <span
+                                class="text-mono text-sm font-semibold cursor-pointer hover-text -mt-0.5 line-height-1 pb-1">Document
+                                1</span>
+                              <span
+                                class="document-truncate text-xs text-muted-foreground -mt-0.5 mb-1 dark:text-white truncate w-[180px]">Sample
+                                PDF.pdf Sample PDF.pdf Sample PDF.pdf</span>
                             </a>
                           </div>
                         </div>
@@ -440,7 +454,7 @@
           </div>
         </div>
         <div id="kt_splitter_middle_right_bar"
-          class="splitter-bar w-1.5 h-full hidden lg:flex relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group z-20 shrink-0"
+          class="splitter-bar w-1.5 h-half hidden lg:flex relative cursor-col-resize flex items-center justify-center gap-2.5 px-0.5 group z-20 shrink-0"
           data-splitter-bar="true">
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
           <span class="h-1 w-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -451,11 +465,15 @@
           data-splitter-pane="right">
           <div id="kt_splitter_top_verticle" class="splitter w-full h-full flex flex-col">
             <div id="first_documents_accordion"
-              class="splitter-pane bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]" data-splitter-pane="top" style="height: 50%;">
+              class="splitter-pane h-full bg-background rounded-lg px-4 py-0 kt-scrollable-y-auto min-w-[300px]"
+              data-splitter-pane="top">
               <div data-kt-accordion="true" class="kt-accordion w-full relative" data-kt-accordion-initialized="true">
-                <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
-                  <button id="accordion_toggle_summary_generator" data-kt-accordion-toggle="true" aria-controls="accordion_design_summary_generator" class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full">
-                    <span class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Summary Generator</span>
+                <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active" aria-expanded="true">
+                  <button id="accordion_toggle_summary_generator" data-kt-accordion-toggle="true"
+                    aria-controls="accordion_design_summary_generator"
+                    class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full">
+                    <span class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Summary
+                      Generator</span>
                     <span aria-hidden="true"
                       class="kt-accordion-indicator kt-btn kt-btn-outline kt-btn-primary kt-btn-sm kt-btn-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -471,12 +489,13 @@
                       </svg>
                     </span>
                   </button>
-                  <div class="kt-accordion-content" aria-labelledby="accordion_toggle_summary_generator" id="accordion_design_summary_generator">
+                  <div class="kt-accordion-content" aria-labelledby="accordion_toggle_summary_generator"
+                    id="accordion_design_summary_generator">
                     <div class="kt-accordion-wrapper">
                       <form class="kt-form">
                         <div class="kt-form-item">
                           <div class="kt-form-control flex gap-2 items-start">
-                            <textarea id="summary_description" rows="4" 
+                            <textarea id="summary_description" rows="4"
                               class="kt-input flex-1 resize-none py-2 min-h-[60px]"
                               placeholder="Enter description..."></textarea>
                             <button type="button" class="kt-btn kt-btn-primary">
@@ -487,48 +506,48 @@
                       </form>
                       <div class="kt-form-item mt-4">
                         <div id="askAnswer" c="" class="kt-form-control">
-                                    <h3>Summary of Memorandum of Understanding (MOU)</h3>
-                                    <ol>
-                                        <li>
-                                            <p><strong>Parties Involved</strong>: The MOU is between the Villages of
-                                                Bloomingdale Community Development District (CDD) and the Villages of
-                                                Bloomingdale I Homeowners Association, Inc. (Association), both located
-                                                in Hillsborough County, Florida. [document 2_v1 (exhibit 28).pdf p.1]
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Purpose</strong>: The MOU outlines responsibilities for the
-                                                maintenance, repair, and replacement of the stormwater management system
-                                                within the District, including funding arrangements. [document 2_v1
-                                                (exhibit 28).pdf p.1]</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Responsibilities</strong>: The District and Association have
-                                                distinct roles in maintaining components of the stormwater system. The
-                                                District may intervene if the Association fails to maintain its
-                                                components, and both parties must coordinate enforcement actions to
-                                                avoid duplication of efforts. [document 2_v1 (exhibit 28).pdf p.3]</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Termination and Notice</strong>: Either party may terminate the
-                                                MOU with at least 12 months' written notice. Notices must be sent via
-                                                certified mail or equivalent methods providing delivery confirmation.
-                                                [document 2_v1 (exhibit 28).pdf p.3]</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Public Records Compliance</strong>: Documents related to the MOU
-                                                are subject to public records laws under Chapter 119 and Chapter 720 of
-                                                the Florida Statutes. [document 2_v1 (exhibit 28).pdf p.3]</p>
-                                        </li>
-                                    </ol>
-                                    <h3>Citations</h3>
-                                    <p>[document 2_v1 (exhibit 28).pdf p.1], [document 2_v1 (exhibit 28).pdf p.3]</p>
-                                    <h3>Disclaimer</h3>
-                                    <p>I’m not a lawyer and this isn’t legal advice. For specific guidance, consult
-                                        counsel.</p>
-                                    <p>Sources: document 2_v1 (exhibit 28).pdf p.1, document 2_v1 (exhibit 28).pdf p.3
-                                    </p>
-                                </div>
+                          <h3>Summary of Memorandum of Understanding (MOU)</h3>
+                          <ol>
+                            <li>
+                              <p><strong>Parties Involved</strong>: The MOU is between the Villages of
+                                Bloomingdale Community Development District (CDD) and the Villages of
+                                Bloomingdale I Homeowners Association, Inc. (Association), both located
+                                in Hillsborough County, Florida. [document 2_v1 (exhibit 28).pdf p.1]
+                              </p>
+                            </li>
+                            <li>
+                              <p><strong>Purpose</strong>: The MOU outlines responsibilities for the
+                                maintenance, repair, and replacement of the stormwater management system
+                                within the District, including funding arrangements. [document 2_v1
+                                (exhibit 28).pdf p.1]</p>
+                            </li>
+                            <li>
+                              <p><strong>Responsibilities</strong>: The District and Association have
+                                distinct roles in maintaining components of the stormwater system. The
+                                District may intervene if the Association fails to maintain its
+                                components, and both parties must coordinate enforcement actions to
+                                avoid duplication of efforts. [document 2_v1 (exhibit 28).pdf p.3]</p>
+                            </li>
+                            <li>
+                              <p><strong>Termination and Notice</strong>: Either party may terminate the
+                                MOU with at least 12 months' written notice. Notices must be sent via
+                                certified mail or equivalent methods providing delivery confirmation.
+                                [document 2_v1 (exhibit 28).pdf p.3]</p>
+                            </li>
+                            <li>
+                              <p><strong>Public Records Compliance</strong>: Documents related to the MOU
+                                are subject to public records laws under Chapter 119 and Chapter 720 of
+                                the Florida Statutes. [document 2_v1 (exhibit 28).pdf p.3]</p>
+                            </li>
+                          </ol>
+                          <h3>Citations</h3>
+                          <p>[document 2_v1 (exhibit 28).pdf p.1], [document 2_v1 (exhibit 28).pdf p.3]</p>
+                          <h3>Disclaimer</h3>
+                          <p>I’m not a lawyer and this isn’t legal advice. For specific guidance, consult
+                            counsel.</p>
+                          <p>Sources: document 2_v1 (exhibit 28).pdf p.1, document 2_v1 (exhibit 28).pdf p.3
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -546,34 +565,37 @@
                 class="w-1 h-1 rounded-full bg-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
             </div>
             <div id="second_documents_accordion"
-              class="splitter-pane flex-grow-1 bg-background rounded-lg px-4 min-w-[300px] flex flex-col min-h-0" data-splitter-pane="bottom" style="height: 50%;">
-              <div data-kt-accordion="true" class="kt-accordion w-full h-full relative" data-kt-accordion-initialized="true">
-                <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active">
-                  <button id="accordion_toggle_chat_messenger" data-kt-accordion-toggle="true" aria-controls="accordion_design_chat_messenger"  class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full shrink-0">
-                    <span class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Chat Messenger</span>
+              class="splitter-pane h-half flex-grow-1 bg-background rounded-lg px-4 min-w-[300px] flex flex-col min-h-0"
+              data-splitter-pane="bottom">
+              <div data-kt-accordion="true" class="kt-accordion w-full h-full relative"
+                data-kt-accordion-initialized="true">
+                <div data-kt-accordion-item="true" class="kt-accordion-item border-0 active" aria-expanded="true">
+                  <button id="accordion_toggle_chat_messenger" data-kt-accordion-toggle="true"
+                    aria-controls="accordion_design_chat_messenger"
+                    class="kt-accordion-toggle sticky top-0 bg-background pt-4 pb-4 z-1 w-full shrink-0">
+                    <span class="text-base font-semibold leading-5 tracking-normal mt-1 text-nowrap">Chat
+                      Messenger</span>
                     <span aria-hidden="true"
                       class="kt-accordion-indicator kt-btn kt-btn-outline kt-btn-primary kt-btn-sm kt-btn-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round"
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                         class="kt-accordion-indicator-on">
                         <path d="M5 12h14"></path>
                         <path d="M12 5v14"></path>
                       </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round"
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                         class="kt-accordion-indicator-off">
                         <path d="M5 12h14"></path>
                       </svg>
                     </span>
                   </button>
-                  <div class="kt-accordion-content"  aria-labelledby="accordion_toggle_chat_messenger" id="accordion_design_chat_messenger">
+                  <div class="kt-accordion-content" aria-labelledby="accordion_toggle_chat_messenger"
+                    id="accordion_design_chat_messenger">
                     <div class="kt-accordion-wrapper">
                       <div id="kt_drawer_chat_messenger"
                         class="kt-card shadow-md border border-border rounded-xl bg-background flex flex-col">
-                        <div id="kt_drawer_chat_messenger_body"
-                          data-kt-element="messages"
+                        <div id="kt_drawer_chat_messenger_body" data-kt-element="messages"
                           class="flex-1 px-3 py-3 space-y-4 bg-muted/30 overflow-y-auto overflow-x-hidden min-h-0 overscroll-contain">
                           <div class="flex justify-start">
                             <div class="max-w-[85%]">
@@ -593,7 +615,8 @@
                             <div class="max-w-[85%] text-right">
                               <div class="inline-block bg-orange-100 text-foreground rounded-lg px-4 py-2 shadow-xs">
                                 <p class="text-sm leading-relaxed">
-                                  Hey, we just wanted to let you know that you've been subscribed to a repository on GitHub.
+                                  Hey, we just wanted to let you know that you've been subscribed to a repository on
+                                  GitHub.
                                 </p>
                               </div>
                             </div>
@@ -602,7 +625,8 @@
                             <div class="max-w-[85%] text-right">
                               <div class="inline-block bg-orange-100 text-foreground rounded-lg px-4 py-2 shadow-xs">
                                 <p class="text-sm leading-relaxed">
-                                  Hey, we just wanted to let you know that you've been subscribed to a repository on GitHub.
+                                  Hey, we just wanted to let you know that you've been subscribed to a repository on
+                                  GitHub.
                                 </p>
                               </div>
                             </div>
@@ -611,7 +635,8 @@
                             <div class="max-w-[85%] text-right">
                               <div class="inline-block bg-orange-100 text-foreground rounded-lg px-4 py-2 shadow-xs">
                                 <p class="text-sm leading-relaxed">
-                                  Hey, we just wanted to let you know that you've been subscribed to a repository on GitHub.
+                                  Hey, we just wanted to let you know that you've been subscribed to a repository on
+                                  GitHub.
                                 </p>
                               </div>
                             </div>
@@ -650,14 +675,10 @@
                             <div class="flex-1">
                               <textarea
                                 class="kt-input kt-input-sm w-full resize-none border border-border rounded-md px-3 py-1 transition-all"
-                                rows="2"
-                                data-kt-element="input"
-                                placeholder="Type a message..."></textarea>
+                                rows="2" data-kt-element="input" placeholder="Type a message..."></textarea>
                             </div>
                             <div class="flex items-center gap-1.5 shrink-0">
-                              <button type="button"
-                                class="kt-btn kt-btn-sm kt-btn-primary"
-                                data-kt-element="send">
+                              <button type="button" class="kt-btn kt-btn-sm kt-btn-primary" data-kt-element="send">
                                 Send
                               </button>
                             </div>
@@ -707,7 +728,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="kt-modal" data-kt-modal="true" id="add_participate_modal">
     <div class="kt-modal-content max-w-[500px] top-5 lg:top-[15%]">
       <div class="kt-modal-header">
@@ -3027,20 +3048,72 @@
     }
   </script>
 
-  <script>
-    document.getElementById('second_documents_accordion')
-    ?.addEventListener('click', function () {
-      const el = this;
-      if (el.classList.contains('expanded')) {
-          el.style.height = '50%';
-          el.classList.remove('expanded');
-      } else {
-          el.style.height = 'auto';
-          el.classList.add('expanded');
-      }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+ <script>
+$(document).ready(function () {
+
+  const first  = $('#first_documents_accordion');
+  const second = $('#second_documents_accordion');
+
+  function applyLayout() {
+
+    const firstExpanded  = first.find('[aria-expanded="true"]').length > 0;
+    const secondExpanded = second.find('[aria-expanded="true"]').length > 0;
+
+    // RESET BOTH (important)
+    first.css({
+      height: '',
+      flex: '',
+      'flex-grow': '',
+      'flex-shrink': ''
     });
-  </script>
-  
+
+    second.css({
+      height: '',
+      flex: '',
+      'flex-grow': '',
+      'flex-shrink': ''
+    });
+
+    // CASE 1: BOTH EXPANDED
+    if (firstExpanded && secondExpanded) {
+      first.css({ height: '50%', flex: 'unset' });
+      second.css({ height: '50%', flex: 'unset' });
+      return;
+    }
+
+    // CASE 2: BOTH COLLAPSED
+    if (!firstExpanded && !secondExpanded) {
+      first.css({ height: 'auto', flex: 'unset' });
+      second.css({ height: 'auto', flex: 'unset' });
+      return;
+    }
+
+    // CASE 3: FIRST EXPANDED, SECOND COLLAPSED
+    if (firstExpanded && !secondExpanded) {
+      first.css({ height: '100%', flex: '1' });
+      second.css({ height: 'auto', flex: 'unset' });
+      return;
+    }
+
+    // CASE 4: FIRST COLLAPSED, SECOND EXPANDED
+    if (!firstExpanded && secondExpanded) {
+      first.css({ height: 'auto', flex: 'unset' });
+      second.css({ height: '100%', flex: '1' });
+      return;
+    }
+  }
+
+  // Run AFTER every accordion click
+  $(document).on('click', '[aria-expanded]', function () {
+    // wait until aria-expanded updates
+    setTimeout(applyLayout, 10);
+  });
+
+});
+</script>
+
 </body>
 
 </html>
