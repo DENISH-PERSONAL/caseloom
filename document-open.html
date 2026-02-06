@@ -3027,6 +3027,19 @@
     }
   </script>
 
+  <script>
+    document.getElementById('second_documents_accordion')
+    ?.addEventListener('click', function () {
+      const el = this;
+      if (el.classList.contains('expanded')) {
+          el.style.height = '50%';
+          el.classList.remove('expanded');
+      } else {
+          el.style.height = 'auto';
+          el.classList.add('expanded');
+      }
+    });
+  </script>
   
 </body>
 
